@@ -95,11 +95,6 @@ namespace EditorDeTexto
 
         }
 
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
@@ -153,15 +148,61 @@ namespace EditorDeTexto
             alinharEsquerda.Size = new Size(30, 30);
         }
 
-        private void fontSize_MouseEnter(object sender, EventArgs e)
+      
+
+        private void negrito_MouseEnter(object sender, EventArgs e)
         {
-            fontSize.Size = new Size(32, 32);
+            negrito.Size = new Size(32, 30);
             OnHouverSound();
         }
 
-        private void fontSize_MouseLeave(object sender, EventArgs e)
+        private void negrito_MouseLeave(object sender, EventArgs e)
         {
-            fontSize.Size = new Size(30, 30);
+            negrito.Size = new Size(30, 28);
+        }
+
+        private void italico_MouseEnter(object sender, EventArgs e)
+        {
+            italico.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void italico_MouseLeave(object sender, EventArgs e)
+        {
+            italico.Size = new Size(30, 30);
+        }
+
+        private void justificar_MouseEnter(object sender, EventArgs e)
+        {
+            justificar.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void justificar_MouseLeave(object sender, EventArgs e)
+        {
+            justificar.Size = new Size(30, 30);
+        }
+
+        private void alinharDireita_MouseEnter(object sender, EventArgs e)
+        {
+            alinharDireita.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void alinharDireita_MouseLeave(object sender, EventArgs e)
+        {
+            alinharDireita.Size = new Size(30, 30);
+        }
+
+        private void centralizar_MouseEnter(object sender, EventArgs e)
+        {
+            centralizar.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void centralizar_MouseLeave(object sender, EventArgs e)
+        {
+            centralizar.Size = new Size(30, 30);
         }
     }
 }

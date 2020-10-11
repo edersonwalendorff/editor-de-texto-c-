@@ -33,7 +33,6 @@
             this.italico = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.negrito = new System.Windows.Forms.PictureBox();
-            this.fontSize = new System.Windows.Forms.PictureBox();
             this.novoArquivo = new System.Windows.Forms.PictureBox();
             this.centralizar = new System.Windows.Forms.PictureBox();
             this.alinharDireita = new System.Windows.Forms.PictureBox();
@@ -50,7 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.italico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.negrito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fontSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).BeginInit();
@@ -68,7 +66,6 @@
             this.panel1.Controls.Add(this.italico);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.negrito);
-            this.panel1.Controls.Add(this.fontSize);
             this.panel1.Controls.Add(this.novoArquivo);
             this.panel1.Controls.Add(this.centralizar);
             this.panel1.Controls.Add(this.alinharDireita);
@@ -87,14 +84,15 @@
             // italico
             // 
             this.italico.Image = ((System.Drawing.Image)(resources.GetObject("italico.Image")));
-            this.italico.Location = new System.Drawing.Point(471, 10);
+            this.italico.Location = new System.Drawing.Point(455, 10);
             this.italico.Name = "italico";
             this.italico.Size = new System.Drawing.Size(30, 30);
             this.italico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.italico.TabIndex = 14;
             this.italico.TabStop = false;
             this.italico.Click += new System.EventHandler(this.italico_Click);
-            this.italico.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.italico.MouseEnter += new System.EventHandler(this.italico_MouseEnter);
+            this.italico.MouseLeave += new System.EventHandler(this.italico_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -112,25 +110,14 @@
             // negrito
             // 
             this.negrito.Image = ((System.Drawing.Image)(resources.GetObject("negrito.Image")));
-            this.negrito.Location = new System.Drawing.Point(435, 10);
+            this.negrito.Location = new System.Drawing.Point(419, 10);
             this.negrito.Name = "negrito";
             this.negrito.Size = new System.Drawing.Size(30, 28);
             this.negrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.negrito.TabIndex = 12;
             this.negrito.TabStop = false;
-            this.negrito.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            // 
-            // fontSize
-            // 
-            this.fontSize.Image = ((System.Drawing.Image)(resources.GetObject("fontSize.Image")));
-            this.fontSize.Location = new System.Drawing.Point(399, 10);
-            this.fontSize.Name = "fontSize";
-            this.fontSize.Size = new System.Drawing.Size(30, 30);
-            this.fontSize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fontSize.TabIndex = 11;
-            this.fontSize.TabStop = false;
-            this.fontSize.MouseEnter += new System.EventHandler(this.fontSize_MouseEnter);
-            this.fontSize.MouseLeave += new System.EventHandler(this.fontSize_MouseLeave);
+            this.negrito.MouseEnter += new System.EventHandler(this.negrito_MouseEnter);
+            this.negrito.MouseLeave += new System.EventHandler(this.negrito_MouseLeave);
             // 
             // novoArquivo
             // 
@@ -154,7 +141,8 @@
             this.centralizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.centralizar.TabIndex = 9;
             this.centralizar.TabStop = false;
-            this.centralizar.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.centralizar.MouseEnter += new System.EventHandler(this.centralizar_MouseEnter);
+            this.centralizar.MouseLeave += new System.EventHandler(this.centralizar_MouseLeave);
             // 
             // alinharDireita
             // 
@@ -165,7 +153,8 @@
             this.alinharDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.alinharDireita.TabIndex = 8;
             this.alinharDireita.TabStop = false;
-            this.alinharDireita.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.alinharDireita.MouseEnter += new System.EventHandler(this.alinharDireita_MouseEnter);
+            this.alinharDireita.MouseLeave += new System.EventHandler(this.alinharDireita_MouseLeave);
             // 
             // justificar
             // 
@@ -176,7 +165,8 @@
             this.justificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.justificar.TabIndex = 7;
             this.justificar.TabStop = false;
-            this.justificar.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.justificar.MouseEnter += new System.EventHandler(this.justificar_MouseEnter);
+            this.justificar.MouseLeave += new System.EventHandler(this.justificar_MouseLeave);
             // 
             // alinharEsquerda
             // 
@@ -206,7 +196,7 @@
             // fonte
             // 
             this.fonte.Image = ((System.Drawing.Image)(resources.GetObject("fonte.Image")));
-            this.fonte.Location = new System.Drawing.Point(363, 10);
+            this.fonte.Location = new System.Drawing.Point(383, 10);
             this.fonte.Name = "fonte";
             this.fonte.Size = new System.Drawing.Size(30, 30);
             this.fonte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +273,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.italico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.negrito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fontSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).EndInit();
@@ -315,7 +304,6 @@
         private System.Windows.Forms.PictureBox italico;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox negrito;
-        private System.Windows.Forms.PictureBox fontSize;
     }
 }
 
