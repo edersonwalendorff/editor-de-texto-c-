@@ -129,8 +129,8 @@
             this.fontSize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fontSize.TabIndex = 11;
             this.fontSize.TabStop = false;
-            this.fontSize.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
-            this.fontSize.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
+            this.fontSize.MouseEnter += new System.EventHandler(this.fontSize_MouseEnter);
+            this.fontSize.MouseLeave += new System.EventHandler(this.fontSize_MouseLeave);
             // 
             // novoArquivo
             // 
@@ -189,6 +189,7 @@
             this.alinharEsquerda.TabStop = false;
             this.alinharEsquerda.Click += new System.EventHandler(this.alinharEsquerda_Click);
             this.alinharEsquerda.MouseEnter += new System.EventHandler(this.alinharEsquerda_MouseEnter);
+            this.alinharEsquerda.MouseLeave += new System.EventHandler(this.alinharEsquerda_MouseLeave);
             // 
             // sbtnSave
             // 

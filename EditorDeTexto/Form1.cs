@@ -144,7 +144,24 @@ namespace EditorDeTexto
 
         private void alinharEsquerda_MouseEnter(object sender, EventArgs e)
         {
-            
+            alinharEsquerda.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void alinharEsquerda_MouseLeave(object sender, EventArgs e)
+        {
+            alinharEsquerda.Size = new Size(30, 30);
+        }
+
+        private void fontSize_MouseEnter(object sender, EventArgs e)
+        {
+            fontSize.Size = new Size(32, 32);
+            OnHouverSound();
+        }
+
+        private void fontSize_MouseLeave(object sender, EventArgs e)
+        {
+            fontSize.Size = new Size(30, 30);
         }
     }
 }
