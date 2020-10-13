@@ -141,6 +141,7 @@
             this.centralizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.centralizar.TabIndex = 9;
             this.centralizar.TabStop = false;
+            this.centralizar.Click += new System.EventHandler(this.centralizar_Click);
             this.centralizar.MouseEnter += new System.EventHandler(this.centralizar_MouseEnter);
             this.centralizar.MouseLeave += new System.EventHandler(this.centralizar_MouseLeave);
             // 
@@ -153,6 +154,7 @@
             this.alinharDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.alinharDireita.TabIndex = 8;
             this.alinharDireita.TabStop = false;
+            this.alinharDireita.Click += new System.EventHandler(this.alinharDireita_Click);
             this.alinharDireita.MouseEnter += new System.EventHandler(this.alinharDireita_MouseEnter);
             this.alinharDireita.MouseLeave += new System.EventHandler(this.alinharDireita_MouseLeave);
             // 
@@ -165,6 +167,7 @@
             this.justificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.justificar.TabIndex = 7;
             this.justificar.TabStop = false;
+            this.justificar.Click += new System.EventHandler(this.justificar_Click);
             this.justificar.MouseEnter += new System.EventHandler(this.justificar_MouseEnter);
             this.justificar.MouseLeave += new System.EventHandler(this.justificar_MouseLeave);
             // 

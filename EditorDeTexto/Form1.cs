@@ -134,7 +134,7 @@ namespace EditorDeTexto
 
         private void alinharEsquerda_Click(object sender, EventArgs e)
         {
-
+            pagina.SelectionAlignment = HorizontalAlignment.Left;
         }
 
         private void alinharEsquerda_MouseEnter(object sender, EventArgs e)
@@ -203,6 +203,28 @@ namespace EditorDeTexto
         private void centralizar_MouseLeave(object sender, EventArgs e)
         {
             centralizar.Size = new Size(30, 30);
+        }
+
+        private void justificar_Click(object sender, EventArgs e)
+        {
+            if(pagina.RightToLeft == RightToLeft.No)
+            {
+                pagina.RightToLeft = RightToLeft.Yes;
+            }
+            else
+            {
+                pagina.RightToLeft = RightToLeft.No;
+            }
+        }
+
+        private void alinharDireita_Click(object sender, EventArgs e)
+        {
+            pagina.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void centralizar_Click(object sender, EventArgs e)
+        {
+            pagina.SelectionAlignment = HorizontalAlignment.Center;
         }
     }
 }
