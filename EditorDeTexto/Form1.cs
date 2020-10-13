@@ -172,7 +172,7 @@ namespace EditorDeTexto
             italico.Size = new Size(30, 30);
         }
 
-        private void justificar_MouseEnter(object sender, EventArgs e)
+      /*  private void justificar_MouseEnter(object sender, EventArgs e)
         {
             justificar.Size = new Size(32, 32);
             OnHouverSound();
@@ -181,7 +181,7 @@ namespace EditorDeTexto
         private void justificar_MouseLeave(object sender, EventArgs e)
         {
             justificar.Size = new Size(30, 30);
-        }
+        }*/
 
         private void alinharDireita_MouseEnter(object sender, EventArgs e)
         {
@@ -205,17 +205,7 @@ namespace EditorDeTexto
             centralizar.Size = new Size(30, 30);
         }
 
-        private void justificar_Click(object sender, EventArgs e)
-        {
-            if(pagina.RightToLeft == RightToLeft.No)
-            {
-                pagina.RightToLeft = RightToLeft.Yes;
-            }
-            else
-            {
-                pagina.RightToLeft = RightToLeft.No;
-            }
-        }
+  
 
         private void alinharDireita_Click(object sender, EventArgs e)
         {

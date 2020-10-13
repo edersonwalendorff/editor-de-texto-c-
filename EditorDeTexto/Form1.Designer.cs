@@ -36,7 +36,6 @@
             this.novoArquivo = new System.Windows.Forms.PictureBox();
             this.centralizar = new System.Windows.Forms.PictureBox();
             this.alinharDireita = new System.Windows.Forms.PictureBox();
-            this.justificar = new System.Windows.Forms.PictureBox();
             this.alinharEsquerda = new System.Windows.Forms.PictureBox();
             this.sbtnSave = new System.Windows.Forms.PictureBox();
             this.fonte = new System.Windows.Forms.PictureBox();
@@ -52,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.justificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharEsquerda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbtnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonte)).BeginInit();
@@ -69,7 +67,6 @@
             this.panel1.Controls.Add(this.novoArquivo);
             this.panel1.Controls.Add(this.centralizar);
             this.panel1.Controls.Add(this.alinharDireita);
-            this.panel1.Controls.Add(this.justificar);
             this.panel1.Controls.Add(this.alinharEsquerda);
             this.panel1.Controls.Add(this.sbtnSave);
             this.panel1.Controls.Add(this.fonte);
@@ -112,7 +109,7 @@
             this.negrito.Image = ((System.Drawing.Image)(resources.GetObject("negrito.Image")));
             this.negrito.Location = new System.Drawing.Point(419, 10);
             this.negrito.Name = "negrito";
-            this.negrito.Size = new System.Drawing.Size(30, 28);
+            this.negrito.Size = new System.Drawing.Size(30, 30);
             this.negrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.negrito.TabIndex = 12;
             this.negrito.TabStop = false;
@@ -135,7 +132,7 @@
             // centralizar
             // 
             this.centralizar.Image = ((System.Drawing.Image)(resources.GetObject("centralizar.Image")));
-            this.centralizar.Location = new System.Drawing.Point(471, 44);
+            this.centralizar.Location = new System.Drawing.Point(419, 48);
             this.centralizar.Name = "centralizar";
             this.centralizar.Size = new System.Drawing.Size(30, 30);
             this.centralizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,7 +145,7 @@
             // alinharDireita
             // 
             this.alinharDireita.Image = ((System.Drawing.Image)(resources.GetObject("alinharDireita.Image")));
-            this.alinharDireita.Location = new System.Drawing.Point(435, 44);
+            this.alinharDireita.Location = new System.Drawing.Point(455, 48);
             this.alinharDireita.Name = "alinharDireita";
             this.alinharDireita.Size = new System.Drawing.Size(30, 30);
             this.alinharDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,23 +155,10 @@
             this.alinharDireita.MouseEnter += new System.EventHandler(this.alinharDireita_MouseEnter);
             this.alinharDireita.MouseLeave += new System.EventHandler(this.alinharDireita_MouseLeave);
             // 
-            // justificar
-            // 
-            this.justificar.Image = ((System.Drawing.Image)(resources.GetObject("justificar.Image")));
-            this.justificar.Location = new System.Drawing.Point(399, 44);
-            this.justificar.Name = "justificar";
-            this.justificar.Size = new System.Drawing.Size(30, 30);
-            this.justificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.justificar.TabIndex = 7;
-            this.justificar.TabStop = false;
-            this.justificar.Click += new System.EventHandler(this.justificar_Click);
-            this.justificar.MouseEnter += new System.EventHandler(this.justificar_MouseEnter);
-            this.justificar.MouseLeave += new System.EventHandler(this.justificar_MouseLeave);
-            // 
             // alinharEsquerda
             // 
             this.alinharEsquerda.Image = ((System.Drawing.Image)(resources.GetObject("alinharEsquerda.Image")));
-            this.alinharEsquerda.Location = new System.Drawing.Point(363, 44);
+            this.alinharEsquerda.Location = new System.Drawing.Point(383, 48);
             this.alinharEsquerda.Name = "alinharEsquerda";
             this.alinharEsquerda.Size = new System.Drawing.Size(30, 30);
             this.alinharEsquerda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,7 +225,12 @@
             // 
             // pagina
             // 
+            this.pagina.AcceptsTab = true;
+            this.pagina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pagina.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pagina.EnableAutoDragDrop = true;
             this.pagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pagina.Location = new System.Drawing.Point(3, 3);
             this.pagina.Name = "pagina";
@@ -279,7 +268,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.justificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharEsquerda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbtnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonte)).EndInit();
@@ -299,7 +287,6 @@
         private System.Windows.Forms.PictureBox fonte;
         private System.Windows.Forms.PictureBox sbtnSave;
         private System.Windows.Forms.RichTextBox pagina;
-        private System.Windows.Forms.PictureBox justificar;
         private System.Windows.Forms.PictureBox alinharEsquerda;
         private System.Windows.Forms.PictureBox centralizar;
         private System.Windows.Forms.PictureBox alinharDireita;
