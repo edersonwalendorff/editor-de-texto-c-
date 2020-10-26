@@ -232,6 +232,8 @@
             this.pagina.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pagina.EnableAutoDragDrop = true;
             this.pagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pagina.HideSelection = false;
+            this.pagina.ImeMode = System.Windows.Forms.ImeMode.On;
             this.pagina.Location = new System.Drawing.Point(3, 3);
             this.pagina.Name = "pagina";
             this.pagina.Size = new System.Drawing.Size(536, 656);
