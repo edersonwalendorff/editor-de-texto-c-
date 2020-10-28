@@ -31,28 +31,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.italico = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LerArquivo = new System.Windows.Forms.PictureBox();
             this.negrito = new System.Windows.Forms.PictureBox();
             this.novoArquivo = new System.Windows.Forms.PictureBox();
             this.centralizar = new System.Windows.Forms.PictureBox();
             this.alinharDireita = new System.Windows.Forms.PictureBox();
             this.alinharEsquerda = new System.Windows.Forms.PictureBox();
-            this.sbtnSave = new System.Windows.Forms.PictureBox();
             this.fonte = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pagina = new System.Windows.Forms.RichTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.svdlg1 = new System.Windows.Forms.SaveFileDialog();
+            this.ofd1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.italico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LerArquivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.negrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharEsquerda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbtnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel3.SuspendLayout();
@@ -62,13 +62,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.OldLace;
             this.panel1.Controls.Add(this.italico);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.LerArquivo);
             this.panel1.Controls.Add(this.negrito);
             this.panel1.Controls.Add(this.novoArquivo);
             this.panel1.Controls.Add(this.centralizar);
             this.panel1.Controls.Add(this.alinharDireita);
             this.panel1.Controls.Add(this.alinharEsquerda);
-            this.panel1.Controls.Add(this.sbtnSave);
             this.panel1.Controls.Add(this.fonte);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -91,18 +90,18 @@
             this.italico.MouseEnter += new System.EventHandler(this.italico_MouseEnter);
             this.italico.MouseLeave += new System.EventHandler(this.italico_MouseLeave);
             // 
-            // pictureBox1
+            // LerArquivo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.LerArquivo.Image = ((System.Drawing.Image)(resources.GetObject("LerArquivo.Image")));
+            this.LerArquivo.Location = new System.Drawing.Point(12, 44);
+            this.LerArquivo.Name = "LerArquivo";
+            this.LerArquivo.Size = new System.Drawing.Size(26, 28);
+            this.LerArquivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LerArquivo.TabIndex = 13;
+            this.LerArquivo.TabStop = false;
+            this.LerArquivo.Click += new System.EventHandler(this.LerArquivo_Click_1);
+            this.LerArquivo.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.LerArquivo.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
             // negrito
             // 
@@ -113,6 +112,7 @@
             this.negrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.negrito.TabIndex = 12;
             this.negrito.TabStop = false;
+            this.negrito.Click += new System.EventHandler(this.negrito_Click);
             this.negrito.MouseEnter += new System.EventHandler(this.negrito_MouseEnter);
             this.negrito.MouseLeave += new System.EventHandler(this.negrito_MouseLeave);
             // 
@@ -168,19 +168,6 @@
             this.alinharEsquerda.MouseEnter += new System.EventHandler(this.alinharEsquerda_MouseEnter);
             this.alinharEsquerda.MouseLeave += new System.EventHandler(this.alinharEsquerda_MouseLeave);
             // 
-            // sbtnSave
-            // 
-            this.sbtnSave.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSave.Image")));
-            this.sbtnSave.Location = new System.Drawing.Point(849, 38);
-            this.sbtnSave.Name = "sbtnSave";
-            this.sbtnSave.Size = new System.Drawing.Size(25, 28);
-            this.sbtnSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.sbtnSave.TabIndex = 5;
-            this.sbtnSave.TabStop = false;
-            this.sbtnSave.Click += new System.EventHandler(this.sbtnSave_Click);
-            this.sbtnSave.MouseEnter += new System.EventHandler(this.sbtnSave_MouseEnter);
-            this.sbtnSave.MouseLeave += new System.EventHandler(this.sbtnSave_MouseLeave);
-            // 
             // fonte
             // 
             this.fonte.Image = ((System.Drawing.Image)(resources.GetObject("fonte.Image")));
@@ -226,29 +213,25 @@
             // 
             // pagina
             // 
-            this.pagina.AcceptsTab = true;
-            this.pagina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pagina.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pagina.EnableAutoDragDrop = true;
-            this.pagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagina.HideSelection = false;
-            this.pagina.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.pagina.Location = new System.Drawing.Point(3, 3);
+            this.pagina.BackColor = System.Drawing.SystemColors.Info;
+            this.pagina.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pagina.Location = new System.Drawing.Point(0, 0);
             this.pagina.Name = "pagina";
-            this.pagina.Size = new System.Drawing.Size(536, 656);
+            this.pagina.Size = new System.Drawing.Size(542, 662);
             this.pagina.TabIndex = 0;
             this.pagina.Text = "";
-            this.pagina.TextChanged += new System.EventHandler(this.pagina_TextChanged);
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 754);
+            this.panel4.Location = new System.Drawing.Point(0, 767);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(888, 34);
+            this.panel4.Size = new System.Drawing.Size(888, 21);
             this.panel4.TabIndex = 2;
+            // 
+            // svdlg1
+            // 
+            this.svdlg1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -266,13 +249,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.italico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LerArquivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.negrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.novoArquivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.centralizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharDireita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alinharEsquerda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbtnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -288,15 +270,16 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.PictureBox fonte;
-        private System.Windows.Forms.PictureBox sbtnSave;
-        private System.Windows.Forms.RichTextBox pagina;
         private System.Windows.Forms.PictureBox alinharEsquerda;
         private System.Windows.Forms.PictureBox centralizar;
         private System.Windows.Forms.PictureBox alinharDireita;
         private System.Windows.Forms.PictureBox novoArquivo;
         private System.Windows.Forms.PictureBox italico;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LerArquivo;
         private System.Windows.Forms.PictureBox negrito;
+        private System.Windows.Forms.SaveFileDialog svdlg1;
+        private System.Windows.Forms.OpenFileDialog ofd1;
+        private System.Windows.Forms.RichTextBox pagina;
     }
 }
 

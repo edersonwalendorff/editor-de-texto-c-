@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Media;
 using System.Windows.Forms;
+//StreamReader leitor = null;
 
 namespace EditorDeTexto
 {
     public partial class Form1 : Form
     {
+
+        //;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,18 +45,7 @@ namespace EditorDeTexto
 
 
         }
-        private void sbtnSave_MouseEnter(object sender, EventArgs e)
-        {
-            sbtnSave.Size = new Size(27, 26);
-            OnHouverSound();
-        }
-
-        private void sbtnSave_MouseLeave(object sender, EventArgs e)
-        {
-            sbtnSave.Size = new Size(25, 24);
-
-        }
-
+       
         private void pagina_TextChanged(object sender, EventArgs e)
         {
             
@@ -90,17 +84,30 @@ namespace EditorDeTexto
 
         private void italico_Click(object sender, EventArgs e)
         {
-
+            Italico();
         }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void Italico()
+        {
+            string nome_fonte = null;
+            float tamanho_fonte = 0;
+            bool italico = false;
+            nome_fonte = pagina.Font.Name;
+            tamanho_fonte = pagina.Font.Size;
+            italico = pagina.Font.Italic;
+            if (italico == false)
+            {
+                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Italic);
+            }
+            else if(italico == true)
+            {
+                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Italic);
+            }
+        }
+        private void LerArquivo_Click_1(object sender, EventArgs e)
         {
             AbrirArquivo();
         }
-        private void toolStripAbrir_Click(object sender, EventArgs e)
-        {
-            AbrirArquivo();
-        }
+       
         private void AbrirArquivo()
         {
             //define as propriedades do controle 
@@ -127,11 +134,11 @@ namespace EditorDeTexto
                     // Lê o arquivo usando a classe StreamReader
                     m_streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
                     // Lê cada linha do stream e faz o parse até a última linha
-                    this.rtxtb1.Text = "";
+                    this.pagina.Text = "";
                     string strLine = m_streamReader.ReadLine();
                     while (strLine != null)
                     {
-                        this.rtxtb1.Text += strLine + "\n";
+                        this.pagina.Text += strLine + "\n";
                         strLine = m_streamReader.ReadLine();
                     }
                     // Fecha o stream
@@ -146,19 +153,14 @@ namespace EditorDeTexto
 
         private void novoArquivo_Click(object sender, EventArgs e)
         {
-            ChamaSalvarArquivo();
-            rtxtb1.Clear();
-            rtxtb1.Focus();
+            ChmSalvarArquivo();
+            pagina.Clear();
+            pagina.Focus();
         }
-        private void toolStripNovo_Click(object sender, EventArgs e)
-        {
-            ChamaSalvarArquivo();
-            rtxtb1.Clear();
-            rtxtb1.Focus();
-        }
+       
         private void ChamaSalvarArquivo()
         {
-            if (!string.IsNullOrEmpty(rtxtb1.Text))
+            if (!string.IsNullOrEmpty(pagina.Text))
             {
                 if ((MessageBox.Show("Deseja Salvar o arquivo ?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes))
                 {
@@ -180,7 +182,7 @@ namespace EditorDeTexto
                     // Escreve para o arquivo usando a classe StreamWriter
                     m_streamWriter.BaseStream.Seek(0, SeekOrigin.Begin);
                     // escreve no controle richtextbox
-                    m_streamWriter.Write(this.rtxtb1.Text);
+                    m_streamWriter.Write(this.pagina.Text);
                     // fecha o arquivo
                     m_streamWriter.Flush();
                     m_streamWriter.Close();
@@ -211,13 +213,13 @@ namespace EditorDeTexto
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox1.Size = new Size(26, 30);
+            LerArquivo.Size = new Size(26, 30);
             OnHouverSound();
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.Size = new Size(24, 28);
+            LerArquivo.Size = new Size(24, 28);
         }
 
         private void alinharEsquerda_Click(object sender, EventArgs e)
@@ -295,17 +297,14 @@ namespace EditorDeTexto
             pagina.SelectionAlignment = HorizontalAlignment.Center;
         }
 
-        private void sbtnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            ChamaSalvarArquivo();
+
         }
-        private void toolStripSalvar_Click(object sender, EventArgs e)
+       
+        private void ChmSalvarArquivo()
         {
-            ChamaSalvarArquivo();
-        }
-        private void ChamaSalvarArquivo()
-        {
-            if (!string.IsNullOrEmpty(rtxtb1.Text))
+            if (!string.IsNullOrEmpty(pagina.Text))
             {
                 if ((MessageBox.Show("Deseja Salvar o arquivo ?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes))
                 {
@@ -314,5 +313,37 @@ namespace EditorDeTexto
             }
         }
 
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void negrito_Click(object sender, EventArgs e)
+        {
+            Negritar();
+        }
+
+        private void Negritar()
+        {
+            string nome_fonte = null;
+            float tamanho_fonte = 0;
+            bool negrito = false;
+            nome_fonte = pagina.Font.Name;
+            tamanho_fonte = pagina.Font.Size;
+            negrito = pagina.Font.Bold;
+            if (negrito == false)
+            {
+                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Bold);
+            }
+            else
+            {
+                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Regular);
+            }
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }
