@@ -97,13 +97,103 @@ namespace EditorDeTexto
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            AbrirArquivo();
+        }
+        private void toolStripAbrir_Click(object sender, EventArgs e)
+        {
+            AbrirArquivo();
+        }
+        private void AbrirArquivo()
+        {
+            //define as propriedades do controle 
+            //OpenFileDialog
+            this.ofd1.Multiselect = true;
+            this.ofd1.Title = "Selecionar Arquivo";
+            ofd1.InitialDirectory = @"C:\Dados\";
+            //filtra para exibir somente arquivos textos
+            ofd1.Filter = "Images (*.TXT)|*.TXT|" + "All files (*.*)|*.*";
+            ofd1.CheckFileExists = true;
+            ofd1.CheckPathExists = true;
+            ofd1.FilterIndex = 1;
+            ofd1.RestoreDirectory = true;
+            ofd1.ReadOnlyChecked = true;
+            ofd1.ShowReadOnly = true;
 
+            DialogResult dr = this.ofd1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    FileStream fs = new FileStream(ofd1.FileName, FileMode.Open, FileAccess.Read);
+                    StreamReader m_streamReader = new StreamReader(fs);
+                    // Lê o arquivo usando a classe StreamReader
+                    m_streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    // Lê cada linha do stream e faz o parse até a última linha
+                    this.rtxtb1.Text = "";
+                    string strLine = m_streamReader.ReadLine();
+                    while (strLine != null)
+                    {
+                        this.rtxtb1.Text += strLine + "\n";
+                        strLine = m_streamReader.ReadLine();
+                    }
+                    // Fecha o stream
+                    m_streamReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro : " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void novoArquivo_Click(object sender, EventArgs e)
         {
-
+            ChamaSalvarArquivo();
+            rtxtb1.Clear();
+            rtxtb1.Focus();
         }
+        private void toolStripNovo_Click(object sender, EventArgs e)
+        {
+            ChamaSalvarArquivo();
+            rtxtb1.Clear();
+            rtxtb1.Focus();
+        }
+        private void ChamaSalvarArquivo()
+        {
+            if (!string.IsNullOrEmpty(rtxtb1.Text))
+            {
+                if ((MessageBox.Show("Deseja Salvar o arquivo ?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes))
+                {
+                    Salvar_Arquivo();
+                }
+            }
+        }
+        private void Salvar_Arquivo()
+        {
+            try
+            {
+                // Pega o nome do arquivo para salvar
+                if (this.svdlg1.ShowDialog() == DialogResult.OK)
+                {
+                    // abre um stream para escrita e cria um StreamWriter para implementar o stream
+                    FileStream fs = new FileStream(svdlg1.FileName, FileMode.OpenOrCreate, FileAccess.Write);
+                    StreamWriter m_streamWriter = new StreamWriter(fs);
+                    m_streamWriter.Flush();
+                    // Escreve para o arquivo usando a classe StreamWriter
+                    m_streamWriter.BaseStream.Seek(0, SeekOrigin.Begin);
+                    // escreve no controle richtextbox
+                    m_streamWriter.Write(this.rtxtb1.Text);
+                    // fecha o arquivo
+                    m_streamWriter.Flush();
+                    m_streamWriter.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro : " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void novoArquivo_MouseLeave(object sender, EventArgs e)
         {
@@ -216,5 +306,25 @@ namespace EditorDeTexto
         {
             pagina.SelectionAlignment = HorizontalAlignment.Center;
         }
+
+        private void sbtnSave_Click(object sender, EventArgs e)
+        {
+            ChamaSalvarArquivo();
+        }
+        private void toolStripSalvar_Click(object sender, EventArgs e)
+        {
+            ChamaSalvarArquivo();
+        }
+        private void ChamaSalvarArquivo()
+        {
+            if (!string.IsNullOrEmpty(rtxtb1.Text))
+            {
+                if ((MessageBox.Show("Deseja Salvar o arquivo ?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes))
+                {
+                    Salvar_Arquivo();
+                }
+            }
+        }
+
     }
 }

@@ -177,6 +177,7 @@
             this.sbtnSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbtnSave.TabIndex = 5;
             this.sbtnSave.TabStop = false;
+            this.sbtnSave.Click += new System.EventHandler(this.sbtnSave_Click);
             this.sbtnSave.MouseEnter += new System.EventHandler(this.sbtnSave_MouseEnter);
             this.sbtnSave.MouseLeave += new System.EventHandler(this.sbtnSave_MouseLeave);
             // 
@@ -242,7 +243,7 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 766);
+            this.panel4.Location = new System.Drawing.Point(0, 754);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(888, 34);
             this.panel4.TabIndex = 2;
@@ -253,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(888, 800);
+            this.ClientSize = new System.Drawing.Size(888, 788);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

@@ -18,3 +18,13 @@ C:\Users\João\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\Edito
 C:\Users\João\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.csproj.CoreCompileInputs.cache
 C:\Users\João\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.exe
 C:\Users\João\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.pdb
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\bin\Debug\EditorDeTexto.exe.config
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\bin\Debug\EditorDeTexto.exe
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\bin\Debug\EditorDeTexto.pdb
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.csprojAssemblyReference.cache
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.Form1.resources
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.Properties.Resources.resources
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.csproj.GenerateResource.cache
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.csproj.CoreCompileInputs.cache
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.exe
+C:\Users\Xykô\Documents\GitHub\editor-de-texto-c-\EditorDeTexto\obj\Debug\EditorDeTexto.pdb
