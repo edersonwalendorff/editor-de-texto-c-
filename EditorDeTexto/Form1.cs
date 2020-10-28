@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
 using System.Media;
-using System.IO;
+using System.Windows.Forms;
 
 namespace EditorDeTexto
 {
@@ -55,8 +54,7 @@ namespace EditorDeTexto
 
         private void pagina_TextChanged(object sender, EventArgs e)
         {
-            pagina.SelectionStart = pagina.Text.Length;
-            pagina.ScrollToCaret();
+            
 
         }
 
@@ -262,17 +260,7 @@ namespace EditorDeTexto
             italico.Size = new Size(30, 30);
         }
 
-      /*  private void justificar_MouseEnter(object sender, EventArgs e)
-        {
-            justificar.Size = new Size(32, 32);
-            OnHouverSound();
-        }
-
-        private void justificar_MouseLeave(object sender, EventArgs e)
-        {
-            justificar.Size = new Size(30, 30);
-        }*/
-
+ 
         private void alinharDireita_MouseEnter(object sender, EventArgs e)
         {
             alinharDireita.Size = new Size(32, 32);
