@@ -45,6 +45,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.svdlg1 = new System.Windows.Forms.SaveFileDialog();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
+            this.fontdlg1 = new System.Windows.Forms.FontDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.italico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LerArquivo)).BeginInit();
@@ -177,6 +178,7 @@
             this.fonte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fonte.TabIndex = 4;
             this.fonte.TabStop = false;
+            this.fonte.Click += new System.EventHandler(this.fonte_Click);
             this.fonte.MouseEnter += new System.EventHandler(this.fonte_MouseEnter);
             this.fonte.MouseLeave += new System.EventHandler(this.fonte_MouseLeave);
             this.fonte.MouseMove += new System.Windows.Forms.MouseEventHandler(this.fonte_MouseMove);
@@ -213,8 +215,10 @@
             // 
             // pagina
             // 
-            this.pagina.BackColor = System.Drawing.SystemColors.Info;
+            this.pagina.AcceptsTab = true;
+            this.pagina.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pagina.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pagina.Location = new System.Drawing.Point(0, 0);
             this.pagina.Name = "pagina";
             this.pagina.Size = new System.Drawing.Size(542, 662);
@@ -232,6 +236,10 @@
             // svdlg1
             // 
             this.svdlg1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // fontdlg1
+            // 
+            this.fontdlg1.Apply += new System.EventHandler(this.fontdlg1_Apply);
             // 
             // Form1
             // 
@@ -280,6 +288,7 @@
         private System.Windows.Forms.SaveFileDialog svdlg1;
         private System.Windows.Forms.OpenFileDialog ofd1;
         private System.Windows.Forms.RichTextBox pagina;
+        private System.Windows.Forms.FontDialog fontdlg1;
     }
 }
 

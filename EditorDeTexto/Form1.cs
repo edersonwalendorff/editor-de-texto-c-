@@ -20,7 +20,7 @@ namespace EditorDeTexto
 
         public void OnHouverSound()
         {
-            SoundPlayer houverSound = new SoundPlayer(@"C:\Users\João\source\repos\EditorDeTexto\EditorDeTexto\resources\sounds/audioOnHouver.wav");
+            SoundPlayer houverSound = new SoundPlayer(@"C:\Users\João\source\repos\EditorDeTexto\EditorDeTexto\resources\sounds/audioOnHouver.wav");//TOCA O SOM AO COLOCAR mouse EM CIMA DO BOTAO
             houverSound.Play();
             
         }
@@ -86,21 +86,25 @@ namespace EditorDeTexto
         {
             Italico();
         }
+
+        bool verdade = false;
         private void Italico()
         {
             string nome_fonte = null;
             float tamanho_fonte = 0;
-            bool italico = false;
+            
             nome_fonte = pagina.Font.Name;
             tamanho_fonte = pagina.Font.Size;
-            italico = pagina.Font.Italic;
-            if (italico == false)
+
+            if (verdade == false)
             {
                 pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Italic);
+                verdade = true;
             }
-            else if(italico == true)
+            else if(verdade == true)
             {
-                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Italic);
+                pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Regular);
+                verdade = false;
             }
         }
         private void LerArquivo_Click_1(object sender, EventArgs e)
@@ -322,26 +326,50 @@ namespace EditorDeTexto
         {
             Negritar();
         }
-
+        bool ver = false;
         private void Negritar()
         {
             string nome_fonte = null;
             float tamanho_fonte = 0;
-            bool negrito = false;
+            
             nome_fonte = pagina.Font.Name;
             tamanho_fonte = pagina.Font.Size;
-            negrito = pagina.Font.Bold;
-            if (negrito == false)
+          
+            if (ver == false)
             {
                 pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Bold);
+                ver = true;
             }
             else
             {
                 pagina.SelectionFont = new Font(nome_fonte, tamanho_fonte, FontStyle.Regular);
+                ver = false;
             }
         }
 
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void fonte_Click(object sender, EventArgs e)
+        {
+            AlterarFonte();
+        }
+
+        private void AlterarFonte()
+        {
+            DialogResult result = fontdlg1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                if (pagina.SelectionFont != null)
+                {
+                    pagina.SelectionFont = fontdlg1.Font;
+                }
+            }
+        }
+
+        private void fontdlg1_Apply(object sender, EventArgs e)
         {
 
         }
