@@ -20,8 +20,7 @@ namespace EditorDeTexto
 
         public void OnHouverSound()
         {
-            SoundPlayer houverSound = new SoundPlayer(@"C:\Users\João\source\repos\EditorDeTexto\EditorDeTexto\resources\sounds/audioOnHouver.wav");//TOCA O SOM AO COLOCAR mouse EM CIMA DO BOTAO
-            houverSound.Play();
+           
             
         }
       
@@ -120,7 +119,7 @@ namespace EditorDeTexto
             this.ofd1.Title = "Selecionar Arquivo";
             ofd1.InitialDirectory = @"C:\Dados\";
             //filtra para exibir somente arquivos textos
-            ofd1.Filter = "Images (*.TXT)|*.TXT|" + "All files (*.*)|*.*";
+            ofd1.Filter = "Text (*.TXT)|*.TXT|" + "All files (*.*)|*.*";
             ofd1.CheckFileExists = true;
             ofd1.CheckPathExists = true;
             ofd1.FilterIndex = 1;
@@ -207,7 +206,7 @@ namespace EditorDeTexto
         private void novoArquivo_MouseEnter(object sender, EventArgs e)
         {
             novoArquivo.Size = new Size(26, 30);
-            OnHouverSound();
+           
         }
 
         private void fonte_MouseMove(object sender, MouseEventArgs e)
@@ -218,7 +217,7 @@ namespace EditorDeTexto
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             LerArquivo.Size = new Size(26, 30);
-            OnHouverSound();
+           
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
@@ -234,7 +233,7 @@ namespace EditorDeTexto
         private void alinharEsquerda_MouseEnter(object sender, EventArgs e)
         {
             alinharEsquerda.Size = new Size(32, 32);
-            OnHouverSound();
+           
         }
 
         private void alinharEsquerda_MouseLeave(object sender, EventArgs e)
@@ -247,7 +246,7 @@ namespace EditorDeTexto
         private void negrito_MouseEnter(object sender, EventArgs e)
         {
             negrito.Size = new Size(32, 30);
-            OnHouverSound();
+          
         }
 
         private void negrito_MouseLeave(object sender, EventArgs e)
@@ -258,7 +257,7 @@ namespace EditorDeTexto
         private void italico_MouseEnter(object sender, EventArgs e)
         {
             italico.Size = new Size(32, 32);
-            OnHouverSound();
+           
         }
 
         private void italico_MouseLeave(object sender, EventArgs e)
@@ -270,7 +269,7 @@ namespace EditorDeTexto
         private void alinharDireita_MouseEnter(object sender, EventArgs e)
         {
             alinharDireita.Size = new Size(32, 32);
-            OnHouverSound();
+          
         }
 
         private void alinharDireita_MouseLeave(object sender, EventArgs e)
@@ -281,7 +280,7 @@ namespace EditorDeTexto
         private void centralizar_MouseEnter(object sender, EventArgs e)
         {
             centralizar.Size = new Size(32, 32);
-            OnHouverSound();
+            
         }
 
         private void centralizar_MouseLeave(object sender, EventArgs e)
