@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Media;
 using System.Windows.Forms;
-//StreamReader leitor = null;
+
 
 namespace EditorDeTexto
 {
     public partial class Form1 : Form
     {
 
-        //;
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +33,7 @@ namespace EditorDeTexto
         {
          
             btnExit.Size = new Size(22, 22);
-             OnHouverSound();
+            
         }
 
         private void btnExit_MouseLeave(object sender, EventArgs e)
@@ -61,8 +59,7 @@ namespace EditorDeTexto
         {
            
             fonte.Size = new Size(32, 32);
-            OnHouverSound();
-
+            
         }
         private void fonte_MouseLeave(object sender, EventArgs e)
         {
@@ -157,7 +154,7 @@ namespace EditorDeTexto
         private void novoArquivo_Click(object sender, EventArgs e)
         {
             ChmSalvarArquivo();
-            pagina.Clear();
+            
             pagina.Focus();
         }
        
@@ -182,7 +179,7 @@ namespace EditorDeTexto
                     FileStream fs = new FileStream(svdlg1.FileName, FileMode.OpenOrCreate, FileAccess.Write);
                     StreamWriter m_streamWriter = new StreamWriter(fs);
                     m_streamWriter.Flush();
-                    // Escreve para o arquivo usando a classe StreamWriter
+                    
                     m_streamWriter.BaseStream.Seek(0, SeekOrigin.Begin);
                     // escreve no controle richtextbox
                     m_streamWriter.Write(this.pagina.Text);
